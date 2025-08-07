@@ -27,5 +27,5 @@
 
 ### [LAB5](https://github.com/Mojinnn/STM32F103_with_HAL/tree/master/LAB5_HCMUT):
 - This includes:
---- [UART_ADC_Config](https://github.com/Mojinnn/STM32F103_with_HAL/tree/master/LAB5_HCMUT/UART_ADC_Config)
---- [ADC_reading_UART_communication](https://github.com/Mojinnn/STM32F103_with_HAL/tree/master/LAB5_HCMUT/ADC_reading_UART_communication)
+  - [UART_ADC_Config](https://github.com/Mojinnn/STM32F103_with_HAL/tree/master/LAB5_HCMUT/UART_ADC_Config)
+  - [ADC_reading_UART_communication](https://github.com/Mojinnn/STM32F103_with_HAL/tree/master/LAB5_HCMUT/ADC_reading_UART_communication)
