@@ -1,0 +1,550 @@
+16:56:12 **** Incremental Build of configuration Debug for project Light_Traffic_FSM_Scheduler ****
+make -j8 all 
+arm-none-eabi-gcc -o "Light_Traffic_FSM_Scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB4_HCMUT\Light_Traffic_FSM_Scheduler\STM32F101C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM_Scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM_Scheduler.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM_Scheduler.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM_Scheduler.elf  > "Light_Traffic_FSM_Scheduler.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM_Scheduler.elf  "Light_Traffic_FSM_Scheduler.hex"
+   text	   data	    bss	    dec	    hex	filename
+  10880	     24	   2480	  13384	   3448	Light_Traffic_FSM_Scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM_Scheduler.list
+ 
+Finished building: Light_Traffic_FSM_Scheduler.hex
+ 
+17:01:31 **** Incremental Build of configuration Debug for project Light_Traffic_FSM_Scheduler ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/input_reading.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/input_reading.d" -MT"Core/Src/input_reading.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/input_reading.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/input_reading.c: In function 'getKeyInput':
+../Core/Src/input_reading.c:42:1: error: number of arguments doesn't match prototype
+   42 | void getKeyInput() {
+      | ^~~~
+In file included from ../Core/Src/input_reading.c:7:
+../Core/Inc/input_reading.h:17:6: error: prototype declaration
+   17 | void getKeyInput(int);
+      |      ^~~~~~~~~~~
+../Core/Src/input_reading.c:43:17: error: 'index' undeclared (first use in this function)
+   43 |         keyReg2[index] = keyReg1[index];
+      |                 ^~~~~
+../Core/Src/input_reading.c:43:17: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:67: Core/Src/input_reading.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+17:02:22 **** Incremental Build of configuration Debug for project Light_Traffic_FSM_Scheduler ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/input_reading.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/input_reading.d" -MT"Core/Src/input_reading.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/input_reading.o"
+../Core/Src/input_reading.c: In function 'getKeyInput':
+../Core/Src/input_reading.c:42:1: error: number of arguments doesn't match prototype
+   42 | void getKeyInput() {
+      | ^~~~
+In file included from ../Core/Src/input_reading.c:7:
+../Core/Inc/input_reading.h:17:6: error: prototype declaration
+   17 | void getKeyInput(int);
+      |      ^~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:67: Core/Src/input_reading.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+17:02:36 **** Incremental Build of configuration Debug for project Light_Traffic_FSM_Scheduler ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/display7SEG.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/display7SEG.d" -MT"Core/Src/display7SEG.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/display7SEG.o"
+arm-none-eabi-gcc "../Core/Src/fsm_automatic.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/fsm_automatic.d" -MT"Core/Src/fsm_automatic.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_automatic.o"
+arm-none-eabi-gcc "../Core/Src/fsm_manual.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/fsm_manual.d" -MT"Core/Src/fsm_manual.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_manual.o"
+arm-none-eabi-gcc "../Core/Src/fsm_setting.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/fsm_setting.d" -MT"Core/Src/fsm_setting.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_setting.o"
+arm-none-eabi-gcc "../Core/Src/global.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/global.d" -MT"Core/Src/global.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/global.o"
+arm-none-eabi-gcc "../Core/Src/input_reading.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/input_reading.d" -MT"Core/Src/input_reading.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/input_reading.o"
+arm-none-eabi-gcc "../Core/Src/led_blinking.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led_blinking.d" -MT"Core/Src/led_blinking.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/led_blinking.o"
+arm-none-eabi-gcc "../Core/Src/light_control.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/light_control.d" -MT"Core/Src/light_control.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/light_control.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/unittest.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/unittest.d" -MT"Core/Src/unittest.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/unittest.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM_Scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB4_HCMUT\Light_Traffic_FSM_Scheduler\STM32F101C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM_Scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM_Scheduler.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM_Scheduler.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM_Scheduler.elf  > "Light_Traffic_FSM_Scheduler.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM_Scheduler.elf  "Light_Traffic_FSM_Scheduler.hex"
+   text	   data	    bss	    dec	    hex	filename
+  11276	     76	   2484	  13836	   360c	Light_Traffic_FSM_Scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM_Scheduler.hex
+ 
+Finished building: Light_Traffic_FSM_Scheduler.list
+ 
+17:04:51 **** Incremental Build of configuration Debug for project Light_Traffic_FSM_Scheduler ****
+make -j8 all 
+arm-none-eabi-size  Light_Traffic_FSM_Scheduler.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11276	     76	   2484	  13836	   360c	Light_Traffic_FSM_Scheduler.elf
+Finished building: default.size.stdout
+ 
+17:06:41 **** Incremental Build of configuration Debug for project Light_Traffic_FSM_Scheduler ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/fsm_setting.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/fsm_setting.d" -MT"Core/Src/fsm_setting.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_setting.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM_Scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB4_HCMUT\Light_Traffic_FSM_Scheduler\STM32F101C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM_Scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM_Scheduler.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM_Scheduler.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM_Scheduler.elf  > "Light_Traffic_FSM_Scheduler.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM_Scheduler.elf  "Light_Traffic_FSM_Scheduler.hex"
+   text	   data	    bss	    dec	    hex	filename
+  11296	     76	   2484	  13856	   3620	Light_Traffic_FSM_Scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM_Scheduler.hex
+ 
+Finished building: Light_Traffic_FSM_Scheduler.list
+ 
+17:35:57 **** Incremental Build of configuration Debug for project Light_Traffic_FSM_Scheduler ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM_Scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB4_HCMUT\Light_Traffic_FSM_Scheduler\STM32F101C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM_Scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM_Scheduler.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM_Scheduler.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM_Scheduler.elf  > "Light_Traffic_FSM_Scheduler.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM_Scheduler.elf  "Light_Traffic_FSM_Scheduler.hex"
+   text	   data	    bss	    dec	    hex	filename
+  11336	     76	   2484	  13896	   3648	Light_Traffic_FSM_Scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM_Scheduler.hex
+ 
+Finished building: Light_Traffic_FSM_Scheduler.list
+ 
+17:40:54 **** Incremental Build of configuration Debug for project Light_Traffic_FSM_Scheduler ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/fsm_setting.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/fsm_setting.d" -MT"Core/Src/fsm_setting.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_setting.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM_Scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB4_HCMUT\Light_Traffic_FSM_Scheduler\STM32F101C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM_Scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM_Scheduler.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM_Scheduler.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM_Scheduler.elf  > "Light_Traffic_FSM_Scheduler.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM_Scheduler.elf  "Light_Traffic_FSM_Scheduler.hex"
+   text	   data	    bss	    dec	    hex	filename
+   7760	     24	   2448	  10232	   27f8	Light_Traffic_FSM_Scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM_Scheduler.hex
+ 
+Finished building: Light_Traffic_FSM_Scheduler.list
+ 
+17:41:08 **** Incremental Build of configuration Debug for project Light_Traffic_FSM_Scheduler ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM_Scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB4_HCMUT\Light_Traffic_FSM_Scheduler\STM32F101C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM_Scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM_Scheduler.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM_Scheduler.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM_Scheduler.elf  > "Light_Traffic_FSM_Scheduler.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM_Scheduler.elf  "Light_Traffic_FSM_Scheduler.hex"
+   text	   data	    bss	    dec	    hex	filename
+  10084	     24	   2480	  12588	   312c	Light_Traffic_FSM_Scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM_Scheduler.hex
+ 
+Finished building: Light_Traffic_FSM_Scheduler.list
+ 
+17:41:30 **** Incremental Build of configuration Debug for project Light_Traffic_FSM_Scheduler ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM_Scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB4_HCMUT\Light_Traffic_FSM_Scheduler\STM32F101C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM_Scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM_Scheduler.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM_Scheduler.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM_Scheduler.elf  > "Light_Traffic_FSM_Scheduler.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM_Scheduler.elf  "Light_Traffic_FSM_Scheduler.hex"
+   text	   data	    bss	    dec	    hex	filename
+  11000	     76	   2484	  13560	   34f8	Light_Traffic_FSM_Scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM_Scheduler.hex
+ 
+Finished building: Light_Traffic_FSM_Scheduler.list
+ 
+17:42:34 **** Incremental Build of configuration Debug for project Light_Traffic_FSM_Scheduler ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM_Scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB4_HCMUT\Light_Traffic_FSM_Scheduler\STM32F101C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM_Scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM_Scheduler.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM_Scheduler.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM_Scheduler.elf  > "Light_Traffic_FSM_Scheduler.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM_Scheduler.elf  "Light_Traffic_FSM_Scheduler.hex"
+   text	   data	    bss	    dec	    hex	filename
+  10920	     24	   2480	  13424	   3470	Light_Traffic_FSM_Scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM_Scheduler.hex
+ 
+Finished building: Light_Traffic_FSM_Scheduler.list
+ 
+17:45:49 **** Incremental Build of configuration Debug for project Light_Traffic_FSM_Scheduler ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/input_reading.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/input_reading.d" -MT"Core/Src/input_reading.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/input_reading.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM_Scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB4_HCMUT\Light_Traffic_FSM_Scheduler\STM32F101C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM_Scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM_Scheduler.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM_Scheduler.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM_Scheduler.elf  > "Light_Traffic_FSM_Scheduler.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM_Scheduler.elf  "Light_Traffic_FSM_Scheduler.hex"
+   text	   data	    bss	    dec	    hex	filename
+  11316	     76	   2484	  13876	   3634	Light_Traffic_FSM_Scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM_Scheduler.hex
+ 
+Finished building: Light_Traffic_FSM_Scheduler.list
+ 
+18:09:25 **** Incremental Build of configuration Debug for project Light_Traffic_FSM_Scheduler ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM_Scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB4_HCMUT\Light_Traffic_FSM_Scheduler\STM32F101C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM_Scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM_Scheduler.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM_Scheduler.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM_Scheduler.elf  > "Light_Traffic_FSM_Scheduler.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM_Scheduler.elf  "Light_Traffic_FSM_Scheduler.hex"
+   text	   data	    bss	    dec	    hex	filename
+  11316	     76	   2484	  13876	   3634	Light_Traffic_FSM_Scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM_Scheduler.hex
+ 
+Finished building: Light_Traffic_FSM_Scheduler.list
+ 
+18:10:30 **** Incremental Build of configuration Debug for project Light_Traffic_FSM_Scheduler ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/input_reading.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/input_reading.d" -MT"Core/Src/input_reading.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/input_reading.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/input_reading.c: In function 'getKeyInput':
+../Core/Src/input_reading.c:84:59: error: 'BT1_GPIO_Port' undeclared (first use in this function); did you mean 'B_H_GPIO_Port'?
+   84 |                         keyReg0[index] = HAL_GPIO_ReadPin(BT1_GPIO_Port, BT1_Pin);
+      |                                                           ^~~~~~~~~~~~~
+      |                                                           B_H_GPIO_Port
+../Core/Src/input_reading.c:84:59: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/input_reading.c:84:74: error: 'BT1_Pin' undeclared (first use in this function); did you mean 'B_H_Pin'?
+   84 |                         keyReg0[index] = HAL_GPIO_ReadPin(BT1_GPIO_Port, BT1_Pin);
+      |                                                                          ^~~~~~~
+      |                                                                          B_H_Pin
+../Core/Src/input_reading.c:86:59: error: 'BT2_GPIO_Port' undeclared (first use in this function); did you mean 'EN2_GPIO_Port'?
+   86 |                         keyReg0[index] = HAL_GPIO_ReadPin(BT2_GPIO_Port, BT2_Pin);
+      |                                                           ^~~~~~~~~~~~~
+      |                                                           EN2_GPIO_Port
+../Core/Src/input_reading.c:86:74: error: 'BT2_Pin' undeclared (first use in this function); did you mean 'EN2_Pin'?
+   86 |                         keyReg0[index] = HAL_GPIO_ReadPin(BT2_GPIO_Port, BT2_Pin);
+      |                                                                          ^~~~~~~
+      |                                                                          EN2_Pin
+../Core/Src/input_reading.c:88:59: error: 'BT3_GPIO_Port' undeclared (first use in this function); did you mean 'EN3_GPIO_Port'?
+   88 |                         keyReg0[index] = HAL_GPIO_ReadPin(BT3_GPIO_Port, BT3_Pin);
+      |                                                           ^~~~~~~~~~~~~
+      |                                                           EN3_GPIO_Port
+../Core/Src/input_reading.c:88:74: error: 'BT3_Pin' undeclared (first use in this function); did you mean 'EN3_Pin'?
+   88 |                         keyReg0[index] = HAL_GPIO_ReadPin(BT3_GPIO_Port, BT3_Pin);
+      |                                                                          ^~~~~~~
+      |                                                                          EN3_Pin
+make: *** [Core/Src/subdir.mk:67: Core/Src/input_reading.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+18:11:16 **** Incremental Build of configuration Debug for project Light_Traffic_FSM_Scheduler ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/input_reading.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/input_reading.d" -MT"Core/Src/input_reading.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/input_reading.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM_Scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB4_HCMUT\Light_Traffic_FSM_Scheduler\STM32F101C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM_Scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM_Scheduler.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM_Scheduler.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM_Scheduler.elf  > "Light_Traffic_FSM_Scheduler.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM_Scheduler.elf  "Light_Traffic_FSM_Scheduler.hex"
+   text	   data	    bss	    dec	    hex	filename
+  11316	     76	   2484	  13876	   3634	Light_Traffic_FSM_Scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM_Scheduler.hex
+ 
+Finished building: Light_Traffic_FSM_Scheduler.list
+ 
+18:12:00 **** Incremental Build of configuration Debug for project Light_Traffic_FSM_Scheduler ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/input_reading.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/input_reading.d" -MT"Core/Src/input_reading.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/input_reading.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM_Scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB4_HCMUT\Light_Traffic_FSM_Scheduler\STM32F101C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM_Scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM_Scheduler.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM_Scheduler.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM_Scheduler.elf  > "Light_Traffic_FSM_Scheduler.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM_Scheduler.elf  "Light_Traffic_FSM_Scheduler.hex"
+   text	   data	    bss	    dec	    hex	filename
+  10480	     76	   2484	  13040	   32f0	Light_Traffic_FSM_Scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM_Scheduler.hex
+ 
+Finished building: Light_Traffic_FSM_Scheduler.list
+ 
+18:13:50 **** Incremental Build of configuration Debug for project Light_Traffic_FSM_Scheduler ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM_Scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB4_HCMUT\Light_Traffic_FSM_Scheduler\STM32F101C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM_Scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM_Scheduler.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM_Scheduler.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM_Scheduler.elf  > "Light_Traffic_FSM_Scheduler.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM_Scheduler.elf  "Light_Traffic_FSM_Scheduler.hex"
+   text	   data	    bss	    dec	    hex	filename
+  10920	     24	   2480	  13424	   3470	Light_Traffic_FSM_Scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM_Scheduler.hex
+ 
+Finished building: Light_Traffic_FSM_Scheduler.list
+ 
+18:14:13 **** Incremental Build of configuration Debug for project Light_Traffic_FSM_Scheduler ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM_Scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB4_HCMUT\Light_Traffic_FSM_Scheduler\STM32F101C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM_Scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM_Scheduler.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM_Scheduler.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM_Scheduler.elf  > "Light_Traffic_FSM_Scheduler.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM_Scheduler.elf  "Light_Traffic_FSM_Scheduler.hex"
+   text	   data	    bss	    dec	    hex	filename
+  11316	     76	   2484	  13876	   3634	Light_Traffic_FSM_Scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM_Scheduler.hex
+ 
+Finished building: Light_Traffic_FSM_Scheduler.list
+ 
+18:14:39 **** Incremental Build of configuration Debug for project Light_Traffic_FSM_Scheduler ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM_Scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB4_HCMUT\Light_Traffic_FSM_Scheduler\STM32F101C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM_Scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM_Scheduler.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM_Scheduler.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM_Scheduler.elf  > "Light_Traffic_FSM_Scheduler.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM_Scheduler.elf  "Light_Traffic_FSM_Scheduler.hex"
+   text	   data	    bss	    dec	    hex	filename
+  11316	     76	   2484	  13876	   3634	Light_Traffic_FSM_Scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM_Scheduler.hex
+ 
+Finished building: Light_Traffic_FSM_Scheduler.list
+ 
+22:13:24 **** Incremental Build of configuration Debug for project Light_Traffic_FSM_Scheduler ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM_Scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB4_HCMUT\Light_Traffic_FSM_Scheduler\STM32F101C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM_Scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM_Scheduler.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM_Scheduler.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM_Scheduler.elf  > "Light_Traffic_FSM_Scheduler.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM_Scheduler.elf  "Light_Traffic_FSM_Scheduler.hex"
+   text	   data	    bss	    dec	    hex	filename
+  11316	     76	   2484	  13876	   3634	Light_Traffic_FSM_Scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM_Scheduler.hex
+ 
+Finished building: Light_Traffic_FSM_Scheduler.list
+ 
+22:24:52 **** Incremental Build of configuration Debug for project Light_Traffic_FSM_Scheduler ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM_Scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB4_HCMUT\Light_Traffic_FSM_Scheduler\STM32F101C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM_Scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM_Scheduler.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM_Scheduler.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM_Scheduler.elf  > "Light_Traffic_FSM_Scheduler.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM_Scheduler.elf  "Light_Traffic_FSM_Scheduler.hex"
+   text	   data	    bss	    dec	    hex	filename
+  11312	     76	   2484	  13872	   3630	Light_Traffic_FSM_Scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM_Scheduler.hex
+ 
+Finished building: Light_Traffic_FSM_Scheduler.list
+ 
+22:27:05 **** Incremental Build of configuration Debug for project Light_Traffic_FSM_Scheduler ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/input_reading.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/input_reading.d" -MT"Core/Src/input_reading.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/input_reading.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM_Scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB4_HCMUT\Light_Traffic_FSM_Scheduler\STM32F101C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM_Scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM_Scheduler.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM_Scheduler.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM_Scheduler.elf  > "Light_Traffic_FSM_Scheduler.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM_Scheduler.elf  "Light_Traffic_FSM_Scheduler.hex"
+   text	   data	    bss	    dec	    hex	filename
+  11316	     76	   2484	  13876	   3634	Light_Traffic_FSM_Scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM_Scheduler.hex
+ 
+Finished building: Light_Traffic_FSM_Scheduler.list
+ 
+22:30:24 **** Incremental Build of configuration Debug for project Light_Traffic_FSM_Scheduler ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:24:10: fatal error: glo: No such file or directory
+   24 | #include "glo"
+      |          ^~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:67: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+22:30:44 **** Incremental Build of configuration Debug for project Light_Traffic_FSM_Scheduler ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:101:3: warning: implicit declaration of function 'SCH_Init' [-Wimplicit-function-declaration]
+  101 |   SCH_Init();
+      |   ^~~~~~~~
+../Core/Src/main.c:102:3: warning: implicit declaration of function 'SCH_Add_Task' [-Wimplicit-function-declaration]
+  102 |   SCH_Add_Task(unittest_blink, 0, 500);
+      |   ^~~~~~~~~~~~
+../Core/Src/main.c:117:11: warning: implicit declaration of function 'SCH_Dispatch_Task' [-Wimplicit-function-declaration]
+  117 |           SCH_Dispatch_Task();
+      |           ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:261:9: warning: implicit declaration of function 'SCH_Updated' [-Wimplicit-function-declaration]
+  261 |         SCH_Updated();
+      |         ^~~~~~~~~~~
+arm-none-eabi-gcc -o "Light_Traffic_FSM_Scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB4_HCMUT\Light_Traffic_FSM_Scheduler\STM32F101C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM_Scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM_Scheduler.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM_Scheduler.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM_Scheduler.elf  > "Light_Traffic_FSM_Scheduler.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM_Scheduler.elf  "Light_Traffic_FSM_Scheduler.hex"
+   text	   data	    bss	    dec	    hex	filename
+  11320	     76	   2484	  13880	   3638	Light_Traffic_FSM_Scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM_Scheduler.hex
+ 
+Finished building: Light_Traffic_FSM_Scheduler.list
+ 
+22:31:01 **** Incremental Build of configuration Debug for project Light_Traffic_FSM_Scheduler ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM_Scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB4_HCMUT\Light_Traffic_FSM_Scheduler\STM32F101C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM_Scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM_Scheduler.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM_Scheduler.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM_Scheduler.elf  > "Light_Traffic_FSM_Scheduler.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM_Scheduler.elf  "Light_Traffic_FSM_Scheduler.hex"
+   text	   data	    bss	    dec	    hex	filename
+  11316	     76	   2484	  13876	   3634	Light_Traffic_FSM_Scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM_Scheduler.hex
+ 
+Finished building: Light_Traffic_FSM_Scheduler.list
+ 
+22:34:11 **** Incremental Build of configuration Debug for project Light_Traffic_FSM_Scheduler ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/fsm_automatic.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/fsm_automatic.d" -MT"Core/Src/fsm_automatic.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_automatic.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM_Scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB4_HCMUT\Light_Traffic_FSM_Scheduler\STM32F101C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM_Scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM_Scheduler.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM_Scheduler.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM_Scheduler.elf  > "Light_Traffic_FSM_Scheduler.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM_Scheduler.elf  "Light_Traffic_FSM_Scheduler.hex"
+   text	   data	    bss	    dec	    hex	filename
+  11392	     84	   2564	  14040	   36d8	Light_Traffic_FSM_Scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM_Scheduler.hex
+ 
+Finished building: Light_Traffic_FSM_Scheduler.list
+ 
+22:44:58 **** Incremental Build of configuration Debug for project Light_Traffic_FSM_Scheduler ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/fsm_automatic.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/fsm_automatic.d" -MT"Core/Src/fsm_automatic.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_automatic.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM_Scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB4_HCMUT\Light_Traffic_FSM_Scheduler\STM32F101C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM_Scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM_Scheduler.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM_Scheduler.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM_Scheduler.elf  > "Light_Traffic_FSM_Scheduler.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM_Scheduler.elf  "Light_Traffic_FSM_Scheduler.hex"
+   text	   data	    bss	    dec	    hex	filename
+  11316	     76	   2484	  13876	   3634	Light_Traffic_FSM_Scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM_Scheduler.hex
+ 
+Finished building: Light_Traffic_FSM_Scheduler.list
+ 
+22:49:28 **** Incremental Build of configuration Debug for project Light_Traffic_FSM_Scheduler ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/scheduler.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/scheduler.d" -MT"Core/Src/scheduler.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/scheduler.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM_Scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB4_HCMUT\Light_Traffic_FSM_Scheduler\STM32F101C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM_Scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM_Scheduler.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM_Scheduler.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM_Scheduler.elf  > "Light_Traffic_FSM_Scheduler.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM_Scheduler.elf  "Light_Traffic_FSM_Scheduler.hex"
+   text	   data	    bss	    dec	    hex	filename
+  11316	     76	   2484	  13876	   3634	Light_Traffic_FSM_Scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM_Scheduler.hex
+ 
+Finished building: Light_Traffic_FSM_Scheduler.list
+ 
+22:53:56 **** Incremental Build of configuration Debug for project Light_Traffic_FSM_Scheduler ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM_Scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB4_HCMUT\Light_Traffic_FSM_Scheduler\STM32F101C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM_Scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM_Scheduler.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM_Scheduler.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM_Scheduler.elf  > "Light_Traffic_FSM_Scheduler.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM_Scheduler.elf  "Light_Traffic_FSM_Scheduler.hex"
+   text	   data	    bss	    dec	    hex	filename
+  11316	     76	   2484	  13876	   3634	Light_Traffic_FSM_Scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM_Scheduler.hex
+ 
+Finished building: Light_Traffic_FSM_Scheduler.list
+ 
+22:56:05 **** Incremental Build of configuration Debug for project Light_Traffic_FSM_Scheduler ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM_Scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB4_HCMUT\Light_Traffic_FSM_Scheduler\STM32F101C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM_Scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM_Scheduler.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM_Scheduler.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM_Scheduler.elf  > "Light_Traffic_FSM_Scheduler.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM_Scheduler.elf  "Light_Traffic_FSM_Scheduler.hex"
+   text	   data	    bss	    dec	    hex	filename
+  11316	     76	   2484	  13876	   3634	Light_Traffic_FSM_Scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM_Scheduler.hex
+ 
+Finished building: Light_Traffic_FSM_Scheduler.list
+ 
+23:00:19 **** Incremental Build of configuration Debug for project Light_Traffic_FSM_Scheduler ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/fsm_setting.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/fsm_setting.d" -MT"Core/Src/fsm_setting.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_setting.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM_Scheduler.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB4_HCMUT\Light_Traffic_FSM_Scheduler\STM32F101C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM_Scheduler.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM_Scheduler.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM_Scheduler.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM_Scheduler.elf  > "Light_Traffic_FSM_Scheduler.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM_Scheduler.elf  "Light_Traffic_FSM_Scheduler.hex"
+   text	   data	    bss	    dec	    hex	filename
+  11336	     76	   2484	  13896	   3648	Light_Traffic_FSM_Scheduler.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM_Scheduler.hex
+ 
+Finished building: Light_Traffic_FSM_Scheduler.list
+ 

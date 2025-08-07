@@ -1,0 +1,21 @@
+13:56:16 **** Incremental Build of configuration Debug for project Traffic_Light_with_7Segment_Counter ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/control_Traffic_Light.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/control_Traffic_Light.d" -MT"Core/Src/control_Traffic_Light.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/control_Traffic_Light.o"
+arm-none-eabi-gcc "../Core/Src/display_7SEG.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F101xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/display_7SEG.d" -MT"Core/Src/display_7SEG.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/display_7SEG.o"
+arm-none-eabi-gcc -o "Traffic_Light_with_7Segment_Counter.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB1_HCMUT\Traffic_Light_with_7Segment_Counter\STM32F101C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Traffic_Light_with_7Segment_Counter.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Traffic_Light_with_7Segment_Counter.elf
+ 
+arm-none-eabi-size  Traffic_Light_with_7Segment_Counter.elf 
+arm-none-eabi-objdump -h -S Traffic_Light_with_7Segment_Counter.elf  > "Traffic_Light_with_7Segment_Counter.list"
+arm-none-eabi-objcopy  -O ihex Traffic_Light_with_7Segment_Counter.elf  "Traffic_Light_with_7Segment_Counter.hex"
+   text	   data	    bss	    dec	    hex	filename
+   7932	     12	   1588	   9532	   253c	Traffic_Light_with_7Segment_Counter.elf
+Finished building: default.size.stdout
+ 
+Finished building: Traffic_Light_with_7Segment_Counter.hex
+Finished building: Traffic_Light_with_7Segment_Counter.list
+ 
+ 
+
+13:56:17 Build Finished. 0 errors, 0 warnings. (took 919ms)
+

@@ -1,0 +1,3 @@
+../Core/Src/control_Traffic_Light.c:18:6:init_control_light	8	static
+../Core/Src/control_Traffic_Light.c:32:6:control_1_light	72	static
+../Core/Src/control_Traffic_Light.c:78:6:control_4_light	8	static

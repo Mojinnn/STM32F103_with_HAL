@@ -1,0 +1,21 @@
+/*
+ * software_timer.h
+ *
+ *  Created on: Jun 9, 2025
+ *      Author: Lenovo
+ */
+
+#ifndef INC_SOFTWARE_TIMER_H_
+#define INC_SOFTWARE_TIMER_H_
+
+#include "main.h"
+
+#define SIZE 2
+
+extern int flag_counter[SIZE];
+
+void setTimer(int, int);
+void runTimer(int);
+
+
+#endif /* INC_SOFTWARE_TIMER_H_ */

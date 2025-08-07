@@ -1,0 +1,84 @@
+/*
+ * control_Traffice_Light.c
+ *
+ *  Created on: Jun 9, 2025
+ *      Author: Lenovo
+ */
+#include "control_Traffic_Light.h"
+
+#define RED 0
+#define YELLOW 1
+#define GREEN 2
+
+int LedX_state, LedY_state;
+int counter_x = 0, counter_y = 0;
+
+
+void init_control_light() {
+	LedX_state = RED;
+	counter_x = 5;
+	HAL_GPIO_WritePin(Led_Red_X_GPIO_Port, Led_Red_X_Pin, SET);
+	HAL_GPIO_WritePin(Led_Yellow_X_GPIO_Port, Led_Yellow_X_Pin, RESET);
+	HAL_GPIO_WritePin(Led_Green_X_GPIO_Port, Led_Green_X_Pin, RESET);
+
+	LedY_state = GREEN;
+	counter_y = 3
+	HAL_GPIO_WritePin(Led_Red_Y_GPIO_Port, Led_Red_Y_Pin, RESET);
+	HAL_GPIO_WritePin(Led_Yellow_Y_GPIO_Port, Led_Yellow_Y_Pin, RESET);
+	HAL_GPIO_WritePin(Led_Green_Y_GPIO_Port, Led_Green_Y_Pin, SET);
+}
+
+void control_1_light(int* LED_state, int* counter, int order) {
+	GPIO_TypeDef* GPIO_Port [3][2] = {
+			{Led_Red_X_GPIO_Port, Led_Red_Y_GPIO_Port},
+			{Led_Yellow_X_GPIO_Port, Led_Yellow_Y_GPIO_Port},
+			{Led_Green_X_GPIO_Port, Led_Green_Y_GPIO_Port}
+	};
+
+	uint16_t GPIO_PIN [3][2] = {
+			{Led_Red_X_Pin, Led_Red_Y_Pin},
+			{Led_Yellow_X_Pin, Led_Yellow_Y_Pin},
+			{Led_Green_X_Pin, Led_Green_Y_Pin}
+	};
+
+	switch (*LED_state) {
+	case RED:
+		if (*counter  <= 0) {
+			HAL_GPIO_WritePin(GPIO_Port [0][order], GPIO_PIN [0][order], RESET);
+			HAL_GPIO_WritePin(GPIO_Port [2][order], GPIO_PIN [2][order], SET);
+			*LED_state = GREEN;
+			*counter = 3;
+		}
+		break;
+
+	case YELLOW:
+		if (*counter  <= 0) {
+			HAL_GPIO_WritePin(GPIO_Port [1][order], GPIO_PIN [1][order], RESET);
+			HAL_GPIO_WritePin(GPIO_Port [0][order], GPIO_PIN [0][order], SET);
+			*LED_state = RED;
+			*counter  = 5;
+		}
+		break;
+
+	case GREEN:
+		if (*counter  <= 0) {
+			HAL_GPIO_WritePin(GPIO_Port [2][order], GPIO_PIN [2][order], RESET);
+			HAL_GPIO_WritePin(GPIO_Port [1][order], GPIO_PIN [1][order], SET);
+			*LED_state = YELLOW;
+			*counter  = 2;
+		}
+		break;
+
+	default:
+		break;
+	}
+}
+
+void control_4_light() {
+	control_1_light(&LedX_state, &counter_x, 0);
+	counter_x--;
+
+	control_1_light(&LedY_state, &counter_y, 1);
+	counter_y--;
+}
+

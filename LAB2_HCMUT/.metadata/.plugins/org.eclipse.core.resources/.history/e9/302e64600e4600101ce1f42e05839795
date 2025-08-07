@@ -1,0 +1,62 @@
+/*
+ * matrix_led.c
+ *
+ *  Created on: Jun 10, 2025
+ *      Author: Lenovo
+ */
+
+#include "matrix_led.h"
+
+const int MAX_LED_MATRIX = 8;
+int index_led_matrix = 0;
+uint8_t matrix_buffer[8] = {
+		0x00, 0xFC, 0xFE, 0x33,0x33, 0xFE, 0xFC, 0x00
+};
+
+void decoderLED (uint8_t _8bit_led_) {
+	/* Control 8x8 matrix led by ULN2803
+	 * ULN 2803: array 8 not gate
+	 * so active-low for ENM to control COLLUMN
+	 * */
+	uint16_t ROW[8] = {
+			ROW0_Pin, ROW1_Pin, ROW2_Pin, ROW3_Pin, ROW4_Pin, ROW5_Pin, ROW6_Pin, ROW7_Pin
+	};
+
+	for (int i = 0; i < 8; i++) {
+		if ((_8bit_led_) & (1 << i)) {
+			HAL_GPIO_WritePin(ROW0_GPIO_Port, ROW[i], RESET);
+		}
+		else {
+			HAL_GPIO_WritePin(ROW0_GPIO_Port, ROW[i], SET);
+		}
+	}
+}
+
+void updateLEDMatrix (int index) {
+
+	HAL_GPIO_WritePin(ENM0_GPIO_Port, ENM0_Pin|ENM1_Pin|ENM2_Pin|ENM3_Pin|ENM4_Pin|ENM5_Pin|ENM6_Pin|ENM7_Pin, SET);
+
+	decodeLED(matrix_buffer[index]);
+
+	switch (index) {
+	case 0:
+		HAL_GPIO_WritePin(ENM0_GPIO_Port, ENM0_Pin, RESET);
+		break;
+	case 1:
+		break;
+	case 2:
+		break;
+	case 3:
+		break;
+	case 4:
+		break;
+	case 5:
+		break;
+	case 6:
+		break;
+	case 7:
+		break;
+	default:
+		break;
+	}
+}

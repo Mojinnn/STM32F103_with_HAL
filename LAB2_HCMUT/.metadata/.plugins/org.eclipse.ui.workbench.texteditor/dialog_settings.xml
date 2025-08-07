@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="hasShownOverlayPopupBefore" value="true"/>
+	<item key="replaceBarOpen" value="true"/>
+	<list key="searchhistory">
+		<item value="GPIO_PIN [6][order]"/>
+		<item value="GPIO_PIN [5][order]"/>
+		<item value="GPIO_PIN [4][order]"/>
+		<item value="GPIO_PIN [3][order]"/>
+		<item value="GPIO_PIN [2][order]"/>
+		<item value="GPIO_PIN [1][order]"/>
+		<item value="GPIO_PIN [0][order]"/>
+		<item value="GPIO_Port [6][order]"/>
+		<item value="GPIO_Port [5][order]"/>
+		<item value="GPIO_Port [4][order]"/>
+		<item value="GPIO_Port [3][order]"/>
+		<item value="GPIO_Port [2][order]"/>
+		<item value="GPIO_Port [1][order]"/>
+		<item value="GPIO_Port [0][order]"/>
+	</list>
+	<list key="replacehistory">
+		<item value="G_Pin"/>
+		<item value="F_Pin"/>
+		<item value="E_Pin"/>
+		<item value="D_Pin"/>
+		<item value="C_Pin"/>
+		<item value="B_Pin"/>
+		<item value="A_Pin"/>
+		<item value="G_GPIO_Port"/>
+		<item value="F_GPIO_Port"/>
+		<item value="E_GPIO_Port"/>
+		<item value="D_GPIO_Port"/>
+		<item value="C_GPIO_Port"/>
+		<item value="A_GPIO_Port"/>
+		<item value="B_GPIO_Port"/>
+	</list>
+</section>

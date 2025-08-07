@@ -1,0 +1,888 @@
+21:33:43 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8312	     16	   1664	   9992	   2708	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.list
+ 
+Finished building: Digital_Clock.hex
+ 
+21:37:38 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/software_timer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/software_timer.d" -MT"Core/Src/software_timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/software_timer.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:114:11: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  114 |           if (flag_counter[DOT] == 1)
+      |           ^~
+../Core/Src/main.c:116:19: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  116 |                   setTimer(DOT, 1000);
+      |                   ^~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:120:1: error: expected identifier or '(' before '}' token
+  120 | }
+      | ^
+make: *** [Core/Src/subdir.mk:43: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+21:37:48 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8320	     16	   1664	  10000	   2710	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+22:22:10 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/software_timer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/software_timer.d" -MT"Core/Src/software_timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/software_timer.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8320	     16	   1664	  10000	   2710	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+22:27:27 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/control_clock.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/control_clock.d" -MT"Core/Src/control_clock.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/control_clock.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8364	     16	   1664	  10044	   273c	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+Finished building: Digital_Clock.list
+ 
+ 
+22:27:52 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/control_clock.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/control_clock.d" -MT"Core/Src/control_clock.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/control_clock.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8364	     16	   1664	  10044	   273c	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+20:22:55 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/control_clock.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/control_clock.d" -MT"Core/Src/control_clock.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/control_clock.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:115:23: error: 'index_led' undeclared (first use in this function)
+  115 |                   if (index_led >= 4) {
+      |                       ^~~~~~~~~
+../Core/Src/main.c:115:23: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:43: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+20:25:18 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:111:23: error: 'index_led' undeclared (first use in this function)
+  111 |                   if (index_led >= 4) {
+      |                       ^~~~~~~~~
+../Core/Src/main.c:111:23: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:43: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+20:29:36 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/control_clock.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/control_clock.d" -MT"Core/Src/control_clock.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/control_clock.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8272	     32	   1664	   9968	   26f0	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+20:36:59 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8268	     32	   1664	   9964	   26ec	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+21:06:18 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/control_clock.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/control_clock.d" -MT"Core/Src/control_clock.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/control_clock.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8316	     32	   1672	  10020	   2724	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+21:08:18 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/control_clock.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/control_clock.d" -MT"Core/Src/control_clock.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/control_clock.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8612	     32	   1672	  10316	   284c	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+22:00:21 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/control_clock.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/control_clock.d" -MT"Core/Src/control_clock.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/control_clock.o"
+arm-none-eabi-gcc "../Core/Src/display_7segment.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/display_7segment.d" -MT"Core/Src/display_7segment.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/display_7segment.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/matrix_led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/matrix_led.d" -MT"Core/Src/matrix_led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/matrix_led.o"
+arm-none-eabi-gcc "../Core/Src/software_timer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/software_timer.d" -MT"Core/Src/software_timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/software_timer.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/syscalls.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:279:25: error: expected ';' before '}' token
+  279 |         runTimer(MATRIX)
+      |                         ^
+      |                         ;
+  280 | }
+      | ~                        
+../Core/Src/matrix_led.c: In function 'decoderLED':
+../Core/Src/matrix_led.c:22:25: error: 'ROW0' undeclared (first use in this function); did you mean 'ROW'?
+   22 |                         ROW0
+      |                         ^~~~
+      |                         ROW
+../Core/Src/matrix_led.c:22:25: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/matrix_led.c:21:18: warning: unused variable 'ROW' [-Wunused-variable]
+   21 |         uint16_t ROW[8] = {
+      |                  ^~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/matrix_led.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+22:22:06 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/matrix_led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/matrix_led.d" -MT"Core/Src/matrix_led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/matrix_led.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sysmem.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f1xx.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f1xx.d" -MT"Core/Src/system_stm32f1xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/system_stm32f1xx.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:127:23: error: 'index_led_matrix' undeclared (first use in this function)
+  127 |                   if (index_led_matrix <= 8) {
+      |                       ^~~~~~~~~~~~~~~~
+../Core/Src/main.c:127:23: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:131:27: warning: implicit declaration of function 'updateLEDMatrix' [-Wimplicit-function-declaration]
+  131 |                           updateLEDMatrix(index_led_matrix++);
+      |                           ^~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+22:24:28 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+D:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/matrix_led.o: in function `updateLEDMatrix':
+D:/ST/STM32CubeIDE_1.18.1/workspace/HCMUT_LAB/LAB2_HCMUT/Digital_Clock/Debug/../Core/Src/matrix_led.c:39:(.text.updateLEDMatrix+0x1e): undefined reference to `decodeLED'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:67: Digital_Clock.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+22:25:32 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/matrix_led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/matrix_led.d" -MT"Core/Src/matrix_led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/matrix_led.o"
+../Core/Src/matrix_led.c: In function 'updateLEDMatrix':
+../Core/Src/matrix_led.c:39:9: warning: implicit declaration of function 'decodeLED'; did you mean 'decoderLED'? [-Wimplicit-function-declaration]
+   39 |         decodeLED(matrix_buffer[index]);
+      |         ^~~~~~~~~
+      |         decoderLED
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+D:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/matrix_led.o: in function `updateLEDMatrix':
+D:/ST/STM32CubeIDE_1.18.1/workspace/HCMUT_LAB/LAB2_HCMUT/Digital_Clock/Debug/../Core/Src/matrix_led.c:39:(.text.updateLEDMatrix+0x1e): undefined reference to `decodeLED'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:67: Digital_Clock.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+22:26:21 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/matrix_led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/matrix_led.d" -MT"Core/Src/matrix_led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/matrix_led.o"
+../Core/Src/matrix_led.c: In function 'updateLEDMatrix':
+../Core/Src/matrix_led.c:39:9: warning: implicit declaration of function 'decodeLED'; did you mean 'decoderLED'? [-Wimplicit-function-declaration]
+   39 |         decodeLED(matrix_buffer[index]);
+      |         ^~~~~~~~~
+      |         decoderLED
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+D:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/matrix_led.o: in function `updateLEDMatrix':
+D:/ST/STM32CubeIDE_1.18.1/workspace/HCMUT_LAB/LAB2_HCMUT/Digital_Clock/Debug/../Core/Src/matrix_led.c:39:(.text.updateLEDMatrix+0x1e): undefined reference to `decodeLED'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:67: Digital_Clock.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+22:26:47 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/matrix_led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/matrix_led.d" -MT"Core/Src/matrix_led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/matrix_led.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9052	     40	   1688	  10780	   2a1c	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+22:28:05 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9056	     40	   1688	  10784	   2a20	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+22:30:33 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/matrix_led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/matrix_led.d" -MT"Core/Src/matrix_led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/matrix_led.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9056	     40	   1688	  10784	   2a20	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+22:35:43 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/matrix_led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/matrix_led.d" -MT"Core/Src/matrix_led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/matrix_led.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9056	     40	   1688	  10784	   2a20	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+22:36:12 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/matrix_led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/matrix_led.d" -MT"Core/Src/matrix_led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/matrix_led.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9056	     40	   1688	  10784	   2a20	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+22:36:36 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9052	     40	   1688	  10780	   2a1c	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+22:40:02 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/matrix_led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/matrix_led.d" -MT"Core/Src/matrix_led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/matrix_led.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9052	     40	   1688	  10780	   2a1c	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+22:40:53 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/matrix_led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/matrix_led.d" -MT"Core/Src/matrix_led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/matrix_led.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9052	     40	   1688	  10780	   2a1c	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+22:45:25 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/matrix_led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/matrix_led.d" -MT"Core/Src/matrix_led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/matrix_led.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9052	     40	   1688	  10780	   2a1c	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+22:47:32 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9056	     40	   1688	  10784	   2a20	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+22:49:40 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/matrix_led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/matrix_led.d" -MT"Core/Src/matrix_led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/matrix_led.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9056	     40	   1688	  10784	   2a20	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+22:53:26 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/matrix_led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/matrix_led.d" -MT"Core/Src/matrix_led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/matrix_led.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+D:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/matrix_led.o: in function `updateLEDMatrix':
+D:/ST/STM32CubeIDE_1.18.1/workspace/HCMUT_LAB/LAB2_HCMUT/Digital_Clock/Debug/../Core/Src/matrix_led.c:45:(.text.updateLEDMatrix+0x1e): undefined reference to `decoderLED'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:67: Digital_Clock.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+22:57:32 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/matrix_led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/matrix_led.d" -MT"Core/Src/matrix_led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/matrix_led.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9056	     40	   1688	  10784	   2a20	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+22:58:19 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/matrix_led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/matrix_led.d" -MT"Core/Src/matrix_led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/matrix_led.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9056	     40	   1688	  10784	   2a20	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+23:00:42 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/matrix_led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/matrix_led.d" -MT"Core/Src/matrix_led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/matrix_led.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9056	     40	   1688	  10784	   2a20	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+23:16:14 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/matrix_led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/matrix_led.d" -MT"Core/Src/matrix_led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/matrix_led.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9056	     40	   1688	  10784	   2a20	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+23:17:39 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9052	     40	   1688	  10780	   2a1c	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+23:20:38 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/matrix_led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/matrix_led.d" -MT"Core/Src/matrix_led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/matrix_led.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9684	     40	   1688	  11412	   2c94	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+23:21:18 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9684	     40	   1688	  11412	   2c94	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+23:25:48 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/matrix_led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/matrix_led.d" -MT"Core/Src/matrix_led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/matrix_led.o"
+../Core/Src/matrix_led.c: In function 'decoderLED':
+../Core/Src/matrix_led.c:28:22: error: '_8bit_led' undeclared (first use in this function); did you mean '_8bit_led_'?
+   28 |                 if ((_8bit_led <<(i)) & (1)) {
+      |                      ^~~~~~~~~
+      |                      _8bit_led_
+../Core/Src/matrix_led.c:28:22: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:46: Core/Src/matrix_led.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+23:26:20 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/matrix_led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/matrix_led.d" -MT"Core/Src/matrix_led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/matrix_led.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9684	     40	   1688	  11412	   2c94	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+23:28:08 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/matrix_led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/matrix_led.d" -MT"Core/Src/matrix_led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/matrix_led.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9684	     40	   1688	  11412	   2c94	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+09:58:41 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/matrix_led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/matrix_led.d" -MT"Core/Src/matrix_led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/matrix_led.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9684	     40	   1688	  11412	   2c94	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+10:07:04 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/matrix_led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/matrix_led.d" -MT"Core/Src/matrix_led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/matrix_led.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9780	     40	   1688	  11508	   2cf4	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+10:09:08 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/matrix_led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/matrix_led.d" -MT"Core/Src/matrix_led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/matrix_led.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9132	     40	   1688	  10860	   2a6c	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+10:09:55 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9132	     40	   1688	  10860	   2a6c	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+10:12:41 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/matrix_led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/matrix_led.d" -MT"Core/Src/matrix_led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/matrix_led.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9052	     40	   1688	  10780	   2a1c	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+10:13:08 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/matrix_led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/matrix_led.d" -MT"Core/Src/matrix_led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/matrix_led.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9052	     40	   1688	  10780	   2a1c	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+10:22:21 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/matrix_led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/matrix_led.d" -MT"Core/Src/matrix_led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/matrix_led.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+D:/ST/STM32CubeIDE_1.18.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/matrix_led.o: in function `updateLEDMatrix':
+D:/ST/STM32CubeIDE_1.18.1/workspace/HCMUT_LAB/LAB2_HCMUT/Digital_Clock/Debug/../Core/Src/matrix_led.c:71:(.text.updateLEDMatrix+0x6e): undefined reference to `decodeLED'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:67: Digital_Clock.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:22:59 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/matrix_led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/matrix_led.d" -MT"Core/Src/matrix_led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/matrix_led.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9136	     40	   1688	  10864	   2a70	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+10:32:26 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9132	     40	   1688	  10860	   2a6c	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+10:32:55 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/matrix_led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/matrix_led.d" -MT"Core/Src/matrix_led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/matrix_led.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9132	     40	   1688	  10860	   2a6c	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+10:34:15 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:133:44: error: invalid suffix "s" on integer constant
+  133 |                           setTimer(MATRIX, 2s);
+      |                                            ^~
+make: *** [Core/Src/subdir.mk:46: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:34:19 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9132	     40	   1688	  10860	   2a6c	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+10:34:50 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9132	     40	   1688	  10860	   2a6c	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+10:40:18 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/matrix_led.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/matrix_led.d" -MT"Core/Src/matrix_led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/matrix_led.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9160	     40	   1688	  10888	   2a88	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 
+10:46:28 **** Incremental Build of configuration Debug for project Digital_Clock ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/software_timer.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/software_timer.d" -MT"Core/Src/software_timer.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/software_timer.o"
+arm-none-eabi-gcc -o "Digital_Clock.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB2_HCMUT\Digital_Clock\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Digital_Clock.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Digital_Clock.elf
+ 
+arm-none-eabi-size  Digital_Clock.elf 
+arm-none-eabi-objdump -h -S Digital_Clock.elf  > "Digital_Clock.list"
+arm-none-eabi-objcopy  -O ihex Digital_Clock.elf  "Digital_Clock.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9232	     40	   1696	  10968	   2ad8	Digital_Clock.elf
+Finished building: default.size.stdout
+ 
+Finished building: Digital_Clock.hex
+ 
+Finished building: Digital_Clock.list
+ 

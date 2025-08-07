@@ -1,0 +1,20 @@
+17:34:16 **** Incremental Build of configuration Debug for project Traffic_Light_with_FSM_Button ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/global.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/global.d" -MT"Core/Src/global.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/global.o"
+arm-none-eabi-gcc -o "Traffic_Light_with_FSM_Button.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB3_HCMUT\Traffic_Light_with_FSM_Button\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Traffic_Light_with_FSM_Button.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Traffic_Light_with_FSM_Button.elf
+ 
+arm-none-eabi-size  Traffic_Light_with_FSM_Button.elf 
+arm-none-eabi-objdump -h -S Traffic_Light_with_FSM_Button.elf  > "Traffic_Light_with_FSM_Button.list"
+arm-none-eabi-objcopy  -O ihex Traffic_Light_with_FSM_Button.elf  "Traffic_Light_with_FSM_Button.hex"
+   text	   data	    bss	    dec	    hex	filename
+  11068	     84	   1764	  12916	   3274	Traffic_Light_with_FSM_Button.elf
+Finished building: default.size.stdout
+ 
+Finished building: Traffic_Light_with_FSM_Button.hex
+ 
+Finished building: Traffic_Light_with_FSM_Button.list
+ 
+
+17:34:17 Build Finished. 0 errors, 0 warnings. (took 651ms)
+

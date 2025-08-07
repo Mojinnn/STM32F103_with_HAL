@@ -1,0 +1,23 @@
+/*
+ * led_7SEG.h
+ *
+ *  Created on: Jul 1, 2025
+ *      Author: Lenovo
+ */
+
+#ifndef INC_LED_7SEG_H_
+#define INC_LED_7SEG_H_
+
+#include "global.h"
+
+void clearAll();
+void turnOn_0 ();
+void turnOn_1 ();
+void turnOn_2 ();
+void turnOn_3 ();
+
+void display7SEG(int num);
+void display7SEG_X(int num);
+void display7SEG_Y(int num);
+
+#endif /* INC_LED_7SEG_H_ */

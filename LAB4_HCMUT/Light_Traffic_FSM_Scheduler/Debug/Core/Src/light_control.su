@@ -1,0 +1,7 @@
+../Core/Src/light_control.c:10:6:light_red_X	8	static
+../Core/Src/light_control.c:16:6:light_red_Y	8	static
+../Core/Src/light_control.c:22:6:light_yellow_X	8	static
+../Core/Src/light_control.c:28:6:light_yellow_Y	8	static
+../Core/Src/light_control.c:34:6:light_green_X	8	static
+../Core/Src/light_control.c:40:6:light_green_Y	8	static
+../Core/Src/light_control.c:46:6:clear_all_light	8	static

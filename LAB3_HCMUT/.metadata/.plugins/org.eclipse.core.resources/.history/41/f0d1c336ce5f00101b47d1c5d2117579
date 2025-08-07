@@ -1,0 +1,157 @@
+/*
+ * fsm_automatic.c
+ *
+ *  Created on: Jul 1, 2025
+ *      Author: Lenovo
+ */
+
+#include "fsm_automatic.h"
+
+void count_second_by_timer7SEG_auto() {
+	count_for_led7seg++;
+	if (count_for_led7seg >= 4) {
+		light_countdown_X--;
+		light_countdown_Y--;
+		count_for_led7seg = 0;
+	}
+}
+
+void fsm_automatic_run() {
+	switch (status) {
+	case INIT:
+
+		status = AUTO_RED_GREEN;
+
+		//Assign edited value for duration
+		red_edit = red_duration;
+		yellow_edit = yellow_duration;
+		green_edit = green_duration;
+
+
+		light_countdown_X = red_duration;
+		light_countdown_Y = green_duration;
+
+		display7SEG_X(light_countdown_X);
+		display7SEG_X(light_countdown_Y);
+		setTimer(LED7SEG, led7seg_duration);
+		break;
+	case AUTO_RED_GREEN:
+		light_red_X();
+		light_green_Y();
+
+		count_second_by_timer7SEG_auto(); // only 4 loop * 250ms = 1s, this function implement
+
+		if (flag_timer[LED7SEG]) {
+			if (light_countdown_Y == 0) {
+				status = AUTO_RED_YELLOW;
+
+				light_countdown_Y = yellow_duration;
+			}
+
+			display7SEG_H(light_countdown_X);
+			display7SEG_V(light_countdown_Y);
+			setTimer(LED7SEG, led7SEG_duration);
+		}
+
+		if (is_button_pressed(0)) {
+			status = MAN_RED;
+
+			clear_all_light();
+			clearAll();
+
+			setTimer(LED7SEG, led7SEG_duration);
+		}
+
+		break;
+	case AUTO_RED_YELLOW:
+		light_red_X();
+		light_yellow_Y();
+
+		count_second_by_timer7SEG_auto();
+
+		if (flag_timer[LED7SEG]) {
+			if (light_countdown_X == 0) {
+				status = AUTO_GREEN_RED;
+
+				light_countdown_X = green_duration;
+				light_countdown_Y = red_duration;
+			}
+
+			display7SEG_H(light_countdown_X);
+			display7SEG_V(light_countdown_Y);
+			setTimer(LED7SEG, led7SEG_duration);
+		}
+
+
+		if (is_button_pressed(0)) {
+			status = MAN_RED;
+
+			clear_all_light();
+			clearAll();
+
+			setTimer(LED7SEG, led7SEG_duration);
+		}
+
+		break;
+	case AUTO_GREEN_RED:
+		light_green_X();
+		light_red_Y();
+
+		count_second_by_timer7SEG_auto();
+
+		if (flag_timer[LED7SEG]) {
+			if (light_countdown_X == 0) {
+				status = AUTO_YELLOW_RED;
+
+				light_countdown_X = yellow_duration;
+			}
+
+			display7SEG_H(light_countdown_X);
+			display7SEG_V(light_countdown_Y);
+			setTimer(LED7SEG, led7SEG_duration);
+		}
+
+		if (is_button_pressed(0)) {
+			status = MAN_RED;
+
+			clear_all_light();
+			clearAll();
+
+			setTimer(LED7SEG, led7SEG_duration);
+		}
+
+		break;
+	case AUTO_YELLOW_RED:
+		light_yellow_X();
+		light_red_Y();
+
+		count_second_by_timer7SEG_auto();
+
+		if (flag_timer[LED7SEG]) {
+			if (light_countdown_X == 0) {
+				status = AUTO_RED_GREEN;
+
+				light_countdown_X = red_duration;
+				light_countdown_Y = green_duration;
+			}
+
+			display7SEG_H(light_countdown_X);
+			display7SEG_V(light_countdown_Y);
+			setTimer(LED7SEG, led7SEG_duration);
+		}
+
+		if (is_button_pressed(0)) {
+			status = MAN_RED;
+
+			clear_all_light();
+			clearAll();
+
+			setTimer(LED7SEG, led7SEG_duration);
+		}
+
+		break;
+	default:
+		break;
+	}
+}
+

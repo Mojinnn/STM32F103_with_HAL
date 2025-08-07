@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Analog_Clock/Core/Src/control_Led.h&apos; to &apos;control_Led.c&apos;" description="Rename resource &apos;control_Led.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Src/control_Led.h" name="control_Led.c" stamp="1749453020670" updateReferences="true"/>
+</session>

@@ -1,0 +1,19 @@
+/*
+ * control_Traffic_Light.h
+ *
+ *  Created on: Jun 9, 2025
+ *      Author: Lenovo
+ */
+
+#ifndef INC_CONTROL_TRAFFIC_LIGHT_H_
+#define INC_CONTROL_TRAFFIC_LIGHT_H_
+
+#include "main.h"
+
+#define RED 0
+#define YELLOW 1
+#define GREEN 2
+
+
+
+#endif /* INC_CONTROL_TRAFFIC_LIGHT_H_ */

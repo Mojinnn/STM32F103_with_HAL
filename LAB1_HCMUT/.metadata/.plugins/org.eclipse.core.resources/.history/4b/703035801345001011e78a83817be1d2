@@ -1,0 +1,66 @@
+/*
+ * control_Led.h
+ *
+ *  Created on: Jun 9, 2025
+ *      Author: Lenovo
+ */
+
+#include "control_Led.h"
+
+int counter_se, counter_mi, counter_hr;
+int se, mi, hr;
+
+uint16_t GPIO_PIN [12] = {Led1_Pin, Led2_Pin, Led3_Pin, Led4_Pin, Led5_Pin, Led6_Pin, Led7_Pin, Led8_Pin, Led9_Pin, Led10_Pin, Led11_Pin, Led12_Pin};
+
+void clearAllClock() {
+	for (int i = 0; i < 12; i++) {
+		HAL_GPIO_WritePin(GPIOA, GPIO_PIN[i], RESET);
+	}
+}
+void setNumberOnClock(int num) {
+
+	if (num > 0 && num < 12) {
+		HAL_GPIO_WritePin(GPIOA, GPIO_PIN[num-1], SET);
+	}
+	else if (num == 0) {
+		HAL_GPIO_WritePin(GPIOA, GPIO_PIN[11], SET);
+	}
+
+}
+void clearNumberOnClock(int num) {
+	if (num > 0 && num < 12) {
+		HAL_GPIO_WritePin(GPIOA, GPIO_PIN[num-1], RESET);
+	}
+	else if (num == 0) {
+		HAL_GPIO_WritePin(GPIOA, GPIO_PIN[11], RESET);
+	}
+}
+
+void init_control_Clock() {
+	counter_se = counter_mi, counter_hr = 0;
+	se = mi = hr = 0;
+}
+
+void control_Clock() {
+	if (counter_se == 60) {
+		counter_se = 0;
+		counter_mi++;
+	}
+	if (counter_mi == 60) {
+		counter_mi = 0;
+		counter_hr ++;
+	}
+	if (counter_hr == 12) {
+		counter_hr = 0;
+	}
+
+	//LED Second
+	clearNumberOnClock(se);
+	se = counter_se/5;
+	setNumberOnClock(se);
+
+	//LED Minute
+	clearNumberOnClock(mi);
+	mi = counter_se/5;
+	setNumberOnClock(mi);
+}

@@ -1,0 +1,7 @@
+../Core/Src/control_clock.c:24:6:init_control_clock	4	static
+../Core/Src/control_clock.c:35:6:control_clock	8	static
+../Core/Src/control_clock.c:74:6:control_DOT	8	static
+../Core/Src/control_clock.c:78:6:clearAll	8	static
+../Core/Src/control_clock.c:85:6:update7SEG	16	static
+../Core/Src/control_clock.c:111:6:updateClockBuffer	4	static
+../Core/Src/control_clock.c:131:6:digital_clock	8	static

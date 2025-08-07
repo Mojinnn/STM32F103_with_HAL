@@ -1,0 +1,13 @@
+/*
+ * control_clock.c
+ *
+ *  Created on: Jun 9, 2025
+ *      Author: Lenovo
+ */
+
+#include "control_clock.h"
+
+#define LED1 0
+#define LED2 1
+#define LED3 2
+#define LED4 3

@@ -1,0 +1,2 @@
+../Core/Src/input_reading.c:19:6:getKeyInput	11
+../Core/Src/input_reading.c:58:5:is_button_pressed	2

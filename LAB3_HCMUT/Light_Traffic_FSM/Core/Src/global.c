@@ -1,0 +1,47 @@
+/*
+ * global.c
+ *
+ *  Created on: Jul 1, 2025
+ *      Author: Lenovo
+ */
+
+#include "global.h"
+
+int status = 0;
+
+int red_duration = 0;
+int green_duration = 0;
+int yellow_duration = 0;
+
+int red_edit = 0;
+int yellow_edit = 0;
+int green_edit = 0;
+
+int light_countdown_X = 0;
+int light_countdown_Y = 0;
+
+int count_for_led7seg = 0;
+int led7seg_duration = 250;
+
+void check_timer_and_display_mode(int mode, int duration) {
+	if (flag_timer[LED7SEG]) {
+		count_for_led7seg++;
+		if (count_for_led7seg >= 4)  count_for_led7seg = 0;
+		if (count_for_led7seg % 2 == 0) {
+			if (mode == 2) {
+				blink_red();
+			}
+			else if (mode == 3) {
+				blink_yellow();
+			}
+			else if (mode == 4) {
+				blink_green();
+			}
+		}
+
+		display7SEG_X(mode);
+		display7SEG_Y(duration);
+
+		setTimer(LED7SEG, led7seg_duration);
+	}
+}

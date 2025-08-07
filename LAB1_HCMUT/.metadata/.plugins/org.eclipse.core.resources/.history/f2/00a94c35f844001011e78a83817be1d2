@@ -1,0 +1,28 @@
+/*
+ * control_Traffice_Light.c
+ *
+ *  Created on: Jun 9, 2025
+ *      Author: Lenovo
+ */
+#include "control_Traffic_Light.h"
+
+#define RED 0
+#define YELLOW 1
+#define GREEN 2
+
+int LedX_state, LedY_state;
+int counter_x = 0, counter_y = 0;
+
+void init_control_light() {
+	LED_state = 0;
+}
+void control_1_light() {
+	switch (LED_state) {
+	case RED:
+		if (counter <= 0) {
+			HAL_GPIO_WritePin(, GPIO_Pin, );
+		}
+	}
+}
+void control_4_light();
+

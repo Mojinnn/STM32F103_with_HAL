@@ -1,0 +1,42 @@
+16:19:47 **** Incremental Build of configuration Debug for project ADC_reading_UART_communication ****
+make -j8 all 
+arm-none-eabi-gcc -o "ADC_reading_UART_communication.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB5_HCMUT\ADC_reading_UART_communication\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC_reading_UART_communication.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADC_reading_UART_communication.elf
+ 
+arm-none-eabi-size  ADC_reading_UART_communication.elf 
+arm-none-eabi-objdump -h -S ADC_reading_UART_communication.elf  > "ADC_reading_UART_communication.list"
+arm-none-eabi-objcopy  -O ihex ADC_reading_UART_communication.elf  "ADC_reading_UART_communication.hex"
+   text	   data	    bss	    dec	    hex	filename
+  17132	    100	   2300	  19532	   4c4c	ADC_reading_UART_communication.elf
+Finished building: default.size.stdout
+ 
+Finished building: ADC_reading_UART_communication.list
+ 
+Finished building: ADC_reading_UART_communication.hex
+ 
+17:22:36 **** Build of configuration Debug for project UART_ADC_Config ****
+make -j8 all 
+arm-none-eabi-size  UART_ADC_Config.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13644	     92	   2052	  15788	   3dac	UART_ADC_Config.elf
+Finished building: default.size.stdout
+ 
+17:46:03 **** Incremental Build of configuration Debug for project UART_ADC_Config ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_hal_msp.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_hal_msp.d" -MT"Core/Src/stm32f1xx_hal_msp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f1xx_it.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f1xx_it.d" -MT"Core/Src/stm32f1xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f1xx_it.o"
+arm-none-eabi-gcc -o "UART_ADC_Config.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB5_HCMUT\UART_ADC_Config\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_ADC_Config.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UART_ADC_Config.elf
+ 
+arm-none-eabi-size  UART_ADC_Config.elf 
+arm-none-eabi-objdump -h -S UART_ADC_Config.elf  > "UART_ADC_Config.list"
+arm-none-eabi-objcopy  -O ihex UART_ADC_Config.elf  "UART_ADC_Config.hex"
+   text	   data	    bss	    dec	    hex	filename
+  14116	     92	   2052	  16260	   3f84	UART_ADC_Config.elf
+Finished building: default.size.stdout
+ 
+Finished building: UART_ADC_Config.hex
+ 
+Finished building: UART_ADC_Config.list
+ 

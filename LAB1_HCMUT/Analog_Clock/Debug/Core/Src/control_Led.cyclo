@@ -1,0 +1,5 @@
+../Core/Src/control_Led.c:15:6:clearAllClock	2
+../Core/Src/control_Led.c:20:6:setNumberOnClock	4
+../Core/Src/control_Led.c:30:6:clearNumberOnClock	4
+../Core/Src/control_Led.c:39:6:init_control_Clock	1
+../Core/Src/control_Led.c:44:6:control_Clock	4

@@ -1,0 +1,3 @@
+../Core/Src/matrix_led.c:20:6:decodeLED	3
+../Core/Src/matrix_led.c:40:6:updateLEDMatrix	9
+../Core/Src/matrix_led.c:142:6:shiftMatrixLED	2

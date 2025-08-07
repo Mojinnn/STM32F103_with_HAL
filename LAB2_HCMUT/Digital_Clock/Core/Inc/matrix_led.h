@@ -1,0 +1,19 @@
+/*
+ * matrix_led.h
+ *
+ *  Created on: Jun 10, 2025
+ *      Author: Lenovo
+ */
+
+#ifndef INC_MATRIX_LED_H_
+#define INC_MATRIX_LED_H_
+
+#include "main.h"
+
+extern int index_led_matrix;
+
+void decodeLED (uint8_t);
+void updateLEDMatrix (int );
+void shiftMatrixLED();
+
+#endif /* INC_MATRIX_LED_H_ */

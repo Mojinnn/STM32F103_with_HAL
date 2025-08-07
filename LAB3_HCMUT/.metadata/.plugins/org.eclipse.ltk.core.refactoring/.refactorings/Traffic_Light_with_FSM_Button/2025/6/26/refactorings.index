@@ -1,0 +1,6 @@
+1750755360112	Move 'light_control.h' to 'Inc'
+1750840819408	Move 'display7SEG.c' to 'Src'
+1750843368317	Rename resource 'output_display.h'
+1750843400446	Rename resource 'output_display.c'
+1750843906813	Rename resource 'set_up_led_fsm.c'
+1750843917985	Rename resource 'set_up_led_fsm.h'

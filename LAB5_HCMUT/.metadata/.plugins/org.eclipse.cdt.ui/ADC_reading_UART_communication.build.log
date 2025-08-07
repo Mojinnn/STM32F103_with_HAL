@@ -1,0 +1,19 @@
+16:19:47 **** Incremental Build of configuration Debug for project ADC_reading_UART_communication ****
+make -j8 all 
+arm-none-eabi-gcc -o "ADC_reading_UART_communication.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB5_HCMUT\ADC_reading_UART_communication\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC_reading_UART_communication.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADC_reading_UART_communication.elf
+ 
+arm-none-eabi-size  ADC_reading_UART_communication.elf 
+arm-none-eabi-objdump -h -S ADC_reading_UART_communication.elf  > "ADC_reading_UART_communication.list"
+arm-none-eabi-objcopy  -O ihex ADC_reading_UART_communication.elf  "ADC_reading_UART_communication.hex"
+   text	   data	    bss	    dec	    hex	filename
+  17132	    100	   2300	  19532	   4c4c	ADC_reading_UART_communication.elf
+Finished building: default.size.stdout
+ 
+Finished building: ADC_reading_UART_communication.list
+ 
+Finished building: ADC_reading_UART_communication.hex
+ 
+
+16:19:48 Build Finished. 0 errors, 0 warnings. (took 898ms)
+

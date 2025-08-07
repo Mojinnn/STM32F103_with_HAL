@@ -1,0 +1,23 @@
+/*
+ * control_clock.c
+ *
+ *  Created on: Jun 9, 2025
+ *      Author: Lenovo
+ */
+
+#include "control_clock.h"
+#include "display_7segment.h"
+
+#define LED1 0
+#define LED2 1
+#define LED3 2
+#define LED4 3
+
+int LED_state;
+
+void init_control_clock() {
+	LED_state = LED1;
+}
+
+void control_clock();
+void control_DOT();

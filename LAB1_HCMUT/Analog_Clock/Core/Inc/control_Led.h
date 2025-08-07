@@ -1,0 +1,20 @@
+/*
+ * control_Led.h
+ *
+ *  Created on: Jun 9, 2025
+ *      Author: Lenovo
+ */
+
+#ifndef INC_CONTROL_LED_H_
+#define INC_CONTROL_LED_H_
+
+#include "main.h"
+
+void clearAllClock();
+void setNumberOnClock(int num);
+void clearNumberOnClock(int num);
+void init_control_Clock();
+void control_Clock();
+
+
+#endif /* INC_CONTROL_LED_H_ */

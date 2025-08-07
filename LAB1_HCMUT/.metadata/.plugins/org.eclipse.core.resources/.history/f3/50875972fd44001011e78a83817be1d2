@@ -1,0 +1,20 @@
+/*
+ * display_7SEG.c
+ *
+ *  Created on: Jun 9, 2025
+ *      Author: Lenovo
+ */
+
+#include "display_7SEG.h"
+
+void display_7SEG(int num, int order) {
+	GPIO_TypeDef* GPIO_Port [7][2] = {
+			{A},
+	};
+
+	uint16_t GPIO_PIN [7][2] = {
+
+	};
+
+	switch (num):
+}

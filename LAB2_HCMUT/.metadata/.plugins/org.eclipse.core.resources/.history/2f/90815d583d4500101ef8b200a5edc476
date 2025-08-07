@@ -1,0 +1,28 @@
+/*
+ * software_timer.c
+ *
+ *  Created on: Jun 9, 2025
+ *      Author: Lenovo
+ */
+
+#include "software_timer.h"
+
+int flag_counter[SIZE];
+int counter[SIZE];
+int CYCLE_TIMER = 10;
+
+void setTimer(int order, int duration) {
+	if (flag_counter[order] == 1) {
+		counter[order] = duration/CYCLE_TIMER;
+
+	}
+}
+
+void runTimer(int order) {
+	if (flag_counter[order] == 1) {
+		counter[order]--;
+		if (counter[order] == 0) {
+			flag_counter[order] = 0;
+		}
+	}
+}

@@ -1,0 +1,67 @@
+/*
+ * control_clock.c
+ *
+ *  Created on: Jun 9, 2025
+ *      Author: Lenovo
+ */
+
+#include "control_clock.h"
+#include "display_7segment.h"
+
+#define LED1 0
+#define LED2 1
+#define LED3 2
+#define LED4 3
+
+int LED_state;
+
+void init_control_clock() {
+	LED_state = LED1;
+	HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, SET);
+	HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, SET);
+	HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, SET);
+	HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, SET);
+}
+
+void control_clock() {
+	HAL_GPIO_TogglePin(Led_Red_GPIO_Port, Led_Red_Pin);
+
+	switch (LED_state) {
+	case LED1:
+		HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, RESET);
+		display_7segment(1);
+		HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, SET);
+		HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, SET);
+		HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, SET);
+		LED_state = LED2;
+		break;
+	case LED2:
+		HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, SET);
+		HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, RESET);
+		display_7segment(2);
+		HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, SET);
+		HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, SET);
+		LED_state = LED3;
+		break;
+	case LED3:
+		HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, SET);
+		HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, SET);
+		HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, RESET);
+		display_7segment(3);
+		HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, SET);
+		LED_state = LED4;
+		break;
+	case LED4:
+		HAL_GPIO_WritePin(EN0_GPIO_Port, EN0_Pin, SET);
+		HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, SET);
+		HAL_GPIO_WritePin(EN2_GPIO_Port, EN2_Pin, SET);
+		HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, RESET);
+		display_7segment(0);
+		LED_state = LED1;
+		break;
+	}
+}
+
+void control_DOT() {
+	HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
+}

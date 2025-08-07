@@ -1,0 +1,19 @@
+/*
+ * input_reading.h
+ *
+ *  Created on: Jul 13, 2025
+ *      Author: Lenovo
+ */
+
+#ifndef INC_INPUT_READING_H_
+#define INC_INPUT_READING_H_
+
+#include "global.h"
+
+
+#define NORMAL_STATE		GPIO_PIN_SET
+#define PRESSED_STATE		GPIO_PIN_RESET
+
+void getKeyInput(void);
+
+#endif /* INC_INPUT_READING_H_ */

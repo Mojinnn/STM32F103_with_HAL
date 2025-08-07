@@ -1,0 +1,19 @@
+/*
+ * control_Led.h
+ *
+ *  Created on: Jun 9, 2025
+ *      Author: Lenovo
+ */
+
+#include "control_Led.h"
+
+void clearAllClock();
+void setNumberOnClock(int num) {
+
+
+	if (num >= 0 && num < 12) {
+		HAL_GPIO_WritePin(Led1, GPIO_Pin, PinState)
+	}
+
+}
+void clearNumberOnClock(int num);

@@ -1,0 +1,23 @@
+/*
+ * control_clock.h
+ *
+ *  Created on: Jun 9, 2025
+ *      Author: Lenovo
+ */
+
+#ifndef INC_CONTROL_CLOCK_H_
+#define INC_CONTROL_CLOCK_H_
+
+#include "main.h"
+
+extern int index_led;
+
+void init_control_clock();
+void control_clock();
+void control_DOT();
+void clearAll();
+void update7SEG(int);
+void updateClockBuffer();
+void digital_clock();
+
+#endif /* INC_CONTROL_CLOCK_H_ */

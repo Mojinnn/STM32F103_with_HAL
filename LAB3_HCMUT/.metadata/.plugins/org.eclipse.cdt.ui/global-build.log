@@ -1,0 +1,297 @@
+16:54:41 **** Incremental Build of configuration Debug for project Light_Traffic_FSM ****
+make -j8 all 
+arm-none-eabi-gcc -o "Light_Traffic_FSM.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB3_HCMUT\Light_Traffic_FSM\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM.elf  > "Light_Traffic_FSM.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM.elf  "Light_Traffic_FSM.hex"
+   text	   data	    bss	    dec	    hex	filename
+  10824	     84	   1764	  12672	   3180	Light_Traffic_FSM.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM.list
+ 
+Finished building: Light_Traffic_FSM.hex
+ 
+17:10:37 **** Incremental Build of configuration Debug for project Light_Traffic_FSM ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB3_HCMUT\Light_Traffic_FSM\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM.elf  > "Light_Traffic_FSM.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM.elf  "Light_Traffic_FSM.hex"
+   text	   data	    bss	    dec	    hex	filename
+   7656	     80	   1736	   9472	   2500	Light_Traffic_FSM.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM.hex
+ 
+Finished building: Light_Traffic_FSM.list
+ 
+17:11:00 **** Incremental Build of configuration Debug for project Light_Traffic_FSM ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB3_HCMUT\Light_Traffic_FSM\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM.elf  > "Light_Traffic_FSM.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM.elf  "Light_Traffic_FSM.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9620	     84	   1764	  11468	   2ccc	Light_Traffic_FSM.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM.hex
+ 
+Finished building: Light_Traffic_FSM.list
+ 
+17:17:36 **** Incremental Build of configuration Debug for project Light_Traffic_FSM ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/fsm_automatic.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/fsm_automatic.d" -MT"Core/Src/fsm_automatic.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_automatic.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB3_HCMUT\Light_Traffic_FSM\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM.elf  > "Light_Traffic_FSM.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM.elf  "Light_Traffic_FSM.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9844	     84	   1764	  11692	   2dac	Light_Traffic_FSM.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM.hex
+ 
+Finished building: Light_Traffic_FSM.list
+ 
+17:27:15 **** Incremental Build of configuration Debug for project Light_Traffic_FSM ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/led_7SEG.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led_7SEG.d" -MT"Core/Src/led_7SEG.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/led_7SEG.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB3_HCMUT\Light_Traffic_FSM\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM.elf  > "Light_Traffic_FSM.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM.elf  "Light_Traffic_FSM.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9844	     84	   1764	  11692	   2dac	Light_Traffic_FSM.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM.hex
+ 
+Finished building: Light_Traffic_FSM.list
+ 
+17:33:12 **** Incremental Build of configuration Debug for project Light_Traffic_FSM ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/led_7SEG.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led_7SEG.d" -MT"Core/Src/led_7SEG.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/led_7SEG.o"
+../Core/Src/led_7SEG.c: In function 'display7SEG_X':
+../Core/Src/led_7SEG.c:75:13: error: 'counter_for_7SEG' undeclared (first use in this function)
+   75 |         if (counter_for_7SEG == 0) {
+      |             ^~~~~~~~~~~~~~~~
+../Core/Src/led_7SEG.c:75:13: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/led_7SEG.c: In function 'display7SEG_Y':
+../Core/Src/led_7SEG.c:90:13: error: 'counter_for_7SEG' undeclared (first use in this function)
+   90 |         if (counter_for_7SEG == 2) {
+      |             ^~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:61: Core/Src/led_7SEG.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+17:33:32 **** Incremental Build of configuration Debug for project Light_Traffic_FSM ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/led_7SEG.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led_7SEG.d" -MT"Core/Src/led_7SEG.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/led_7SEG.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB3_HCMUT\Light_Traffic_FSM\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM.elf  > "Light_Traffic_FSM.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM.elf  "Light_Traffic_FSM.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9844	     84	   1764	  11692	   2dac	Light_Traffic_FSM.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM.hex
+ 
+Finished building: Light_Traffic_FSM.list
+ 
+17:37:16 **** Incremental Build of configuration Debug for project Light_Traffic_FSM ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/global.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/global.d" -MT"Core/Src/global.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/global.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB3_HCMUT\Light_Traffic_FSM\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM.elf  > "Light_Traffic_FSM.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM.elf  "Light_Traffic_FSM.hex"
+   text	   data	    bss	    dec	    hex	filename
+   9844	     84	   1764	  11692	   2dac	Light_Traffic_FSM.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM.hex
+ 
+Finished building: Light_Traffic_FSM.list
+ 
+17:38:23 **** Incremental Build of configuration Debug for project Light_Traffic_FSM ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB3_HCMUT\Light_Traffic_FSM\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM.elf  > "Light_Traffic_FSM.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM.elf  "Light_Traffic_FSM.hex"
+   text	   data	    bss	    dec	    hex	filename
+  10824	     84	   1764	  12672	   3180	Light_Traffic_FSM.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM.hex
+ 
+Finished building: Light_Traffic_FSM.list
+ 
+17:41:33 **** Incremental Build of configuration Debug for project Light_Traffic_FSM ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/led_7SEG.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led_7SEG.d" -MT"Core/Src/led_7SEG.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/led_7SEG.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB3_HCMUT\Light_Traffic_FSM\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM.elf  > "Light_Traffic_FSM.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM.elf  "Light_Traffic_FSM.hex"
+   text	   data	    bss	    dec	    hex	filename
+  11104	     84	   1764	  12952	   3298	Light_Traffic_FSM.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM.hex
+ 
+Finished building: Light_Traffic_FSM.list
+ 
+17:48:39 **** Incremental Build of configuration Debug for project Light_Traffic_FSM ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/global.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/global.d" -MT"Core/Src/global.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/global.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB3_HCMUT\Light_Traffic_FSM\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM.elf  > "Light_Traffic_FSM.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM.elf  "Light_Traffic_FSM.hex"
+   text	   data	    bss	    dec	    hex	filename
+  11104	     72	   1776	  12952	   3298	Light_Traffic_FSM.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM.hex
+ 
+Finished building: Light_Traffic_FSM.list
+ 
+23:24:58 **** Incremental Build of configuration Debug for project Light_Traffic_FSM ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/led_7SEG.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led_7SEG.d" -MT"Core/Src/led_7SEG.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/led_7SEG.o"
+../Core/Src/led_7SEG.c: In function 'display7SEG_X':
+../Core/Src/led_7SEG.c:143:13: warning: unused variable 'led_2' [-Wunused-variable]
+  143 |         int led_2 = num %10;
+      |             ^~~~~
+../Core/Src/led_7SEG.c:142:13: warning: unused variable 'led_1' [-Wunused-variable]
+  142 |         int led_1 = num/10;
+      |             ^~~~~
+../Core/Src/led_7SEG.c: In function 'display7SEG_Y':
+../Core/Src/led_7SEG.c:158:13: warning: unused variable 'led_2' [-Wunused-variable]
+  158 |         int led_2 = num %10;
+      |             ^~~~~
+../Core/Src/led_7SEG.c:157:13: warning: unused variable 'led_1' [-Wunused-variable]
+  157 |         int led_1 = num/10;
+      |             ^~~~~
+arm-none-eabi-gcc -o "Light_Traffic_FSM.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB3_HCMUT\Light_Traffic_FSM\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM.elf  > "Light_Traffic_FSM.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM.elf  "Light_Traffic_FSM.hex"
+   text	   data	    bss	    dec	    hex	filename
+  11104	     72	   1776	  12952	   3298	Light_Traffic_FSM.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM.hex
+ 
+Finished building: Light_Traffic_FSM.list
+ 
+23:26:33 **** Incremental Build of configuration Debug for project Light_Traffic_FSM ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/led_7SEG.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led_7SEG.d" -MT"Core/Src/led_7SEG.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/led_7SEG.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB3_HCMUT\Light_Traffic_FSM\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM.elf  > "Light_Traffic_FSM.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM.elf  "Light_Traffic_FSM.hex"
+   text	   data	    bss	    dec	    hex	filename
+  11104	     72	   1776	  12952	   3298	Light_Traffic_FSM.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM.hex
+ 
+Finished building: Light_Traffic_FSM.list
+ 
+23:31:19 **** Incremental Build of configuration Debug for project Light_Traffic_FSM ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/fsm_automatic.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/fsm_automatic.d" -MT"Core/Src/fsm_automatic.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_automatic.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB3_HCMUT\Light_Traffic_FSM\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM.elf  > "Light_Traffic_FSM.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM.elf  "Light_Traffic_FSM.hex"
+   text	   data	    bss	    dec	    hex	filename
+  11052	     72	   1776	  12900	   3264	Light_Traffic_FSM.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM.hex
+ 
+Finished building: Light_Traffic_FSM.list
+ 
+23:42:49 **** Incremental Build of configuration Debug for project Light_Traffic_FSM ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/fsm_automatic.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/fsm_automatic.d" -MT"Core/Src/fsm_automatic.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_automatic.o"
+arm-none-eabi-gcc "../Core/Src/fsm_manual.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/fsm_manual.d" -MT"Core/Src/fsm_manual.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_manual.o"
+arm-none-eabi-gcc "../Core/Src/fsm_setting.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/fsm_setting.d" -MT"Core/Src/fsm_setting.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_setting.o"
+arm-none-eabi-gcc "../Core/Src/global.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/global.d" -MT"Core/Src/global.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/global.o"
+arm-none-eabi-gcc "../Core/Src/input_reading.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/input_reading.d" -MT"Core/Src/input_reading.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/input_reading.o"
+arm-none-eabi-gcc "../Core/Src/led_7SEG.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led_7SEG.d" -MT"Core/Src/led_7SEG.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/led_7SEG.o"
+arm-none-eabi-gcc "../Core/Src/light_control.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/light_control.d" -MT"Core/Src/light_control.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/light_control.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/unittest.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/unittest.d" -MT"Core/Src/unittest.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/unittest.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB3_HCMUT\Light_Traffic_FSM\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM.elf  > "Light_Traffic_FSM.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM.elf  "Light_Traffic_FSM.hex"
+   text	   data	    bss	    dec	    hex	filename
+  11104	     72	   1776	  12952	   3298	Light_Traffic_FSM.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM.hex
+ 
+Finished building: Light_Traffic_FSM.list
+ 
+23:42:54 **** Incremental Build of configuration Debug for project Light_Traffic_FSM ****
+make -j8 all 
+arm-none-eabi-size  Light_Traffic_FSM.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11104	     72	   1776	  12952	   3298	Light_Traffic_FSM.elf
+Finished building: default.size.stdout
+ 
+23:48:01 **** Incremental Build of configuration Debug for project Light_Traffic_FSM ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/fsm_automatic.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/fsm_automatic.d" -MT"Core/Src/fsm_automatic.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/fsm_automatic.o"
+arm-none-eabi-gcc -o "Light_Traffic_FSM.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\ST\STM32CubeIDE_1.18.1\workspace\HCMUT_LAB\LAB3_HCMUT\Light_Traffic_FSM\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Light_Traffic_FSM.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Light_Traffic_FSM.elf
+ 
+arm-none-eabi-size  Light_Traffic_FSM.elf 
+arm-none-eabi-objdump -h -S Light_Traffic_FSM.elf  > "Light_Traffic_FSM.list"
+arm-none-eabi-objcopy  -O ihex Light_Traffic_FSM.elf  "Light_Traffic_FSM.hex"
+   text	   data	    bss	    dec	    hex	filename
+  11104	     72	   1776	  12952	   3298	Light_Traffic_FSM.elf
+Finished building: default.size.stdout
+ 
+Finished building: Light_Traffic_FSM.hex
+ 
+Finished building: Light_Traffic_FSM.list
+ 

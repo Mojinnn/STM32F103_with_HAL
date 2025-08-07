@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="hasShownOverlayPopupBefore" value="true"/>
+	<item key="replaceBarOpen" value="true"/>
+	<list key="searchhistory">
+		<item value="GPIO_Pin[6][index]"/>
+		<item value="GPIO_Pin[5][index]"/>
+		<item value="GPIO_Pin[4][index]"/>
+		<item value="GPIO_Pin[3][index]"/>
+		<item value="GPIO_Pin[2][index]"/>
+		<item value="GPIO_Pin[1][index]"/>
+		<item value="GPIO_Pin[0][index]"/>
+		<item value="GPIO_Port[6][index]"/>
+		<item value="GPIO_Port[5][index]"/>
+		<item value="GPIO_Port[4][index]"/>
+		<item value="GPIO_Port[3][index]"/>
+		<item value="GPIO_Port[2][index]"/>
+		<item value="GPIO_Port[1][index]"/>
+		<item value="GPIO_Port[0][index]"/>
+		<item value="Led_Red_Horizontal"/>
+	</list>
+	<list key="replacehistory">
+		<item value="G_H_Pin"/>
+		<item value="F_H_Pin"/>
+		<item value="E_H_Pin"/>
+		<item value="D_H_Pin"/>
+		<item value="C_H_Pin"/>
+		<item value="B_H_Pin"/>
+		<item value="A_H_Pin"/>
+		<item value="G_H_GPIO_Port"/>
+		<item value="E_H_GPIO_Port"/>
+		<item value="F_H_GPIO_Port"/>
+		<item value="D_H_GPIO_Port"/>
+		<item value="C_H_GPIO_Port"/>
+		<item value="B_H_GPIO_Port"/>
+		<item value="A_H_GPIO_Port"/>
+		<item value="Led_Red_Y"/>
+	</list>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value=""/>
+		<list key="findhistory">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="646"/>
+		<item key="DIALOG_Y_ORIGIN" value="349"/>
+	</section>
+</section>
